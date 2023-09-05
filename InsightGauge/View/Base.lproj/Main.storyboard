@@ -114,22 +114,22 @@
         <!--Create Battle-->
         <scene sceneID="16Q-7o-7bj">
             <objects>
-                <viewController id="Hoq-LT-acm" sceneMemberID="viewController">
+                <viewController id="Hoq-LT-acm" customClass="CreateViewController" customModule="InsightGauge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IW2-EK-kYY">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="i5Q-Re-DtF">
-                                <rect key="frame" x="10" y="10" width="373" height="684.66666666666663"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="-50" translatesAutoresizingMaskIntoConstraints="NO" id="i5Q-Re-DtF">
+                                <rect key="frame" x="40" y="10" width="313" height="658"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xpl-zc-dKK">
-                                        <rect key="frame" x="0.0" y="0.0" width="373" height="228.33333333333334"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="313" height="252.66666666666666"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="2XC-sh-20i">
-                                                <rect key="frame" x="0.0" y="-1" width="373" height="174"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder-removebg-preview" translatesAutoresizingMaskIntoConstraints="NO" id="2XC-sh-20i">
+                                                <rect key="frame" x="0.0" y="0.0" width="313" height="203.33333333333334"/>
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pzb-N3-Pso">
-                                                <rect key="frame" x="0.0" y="193.33333333333334" width="373" height="35"/>
+                                                <rect key="frame" x="0.0" y="223.33333333333334" width="313" height="29.333333333333343"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="pzb-N3-Pso" secondAttribute="height" multiplier="373:35" id="US2-Gq-5Nb"/>
                                                 </constraints>
@@ -149,16 +149,16 @@
                                         </constraints>
                                     </view>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="istockphoto-1459545409-612x612-removebg-preview" translatesAutoresizingMaskIntoConstraints="NO" id="pA9-6M-XQa">
-                                        <rect key="frame" x="0.0" y="228.33333333333337" width="373" height="228"/>
+                                        <rect key="frame" x="90" y="202.66666666666669" width="133" height="252.66666666666669"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vWv-Na-cb6">
-                                        <rect key="frame" x="0.0" y="456.33333333333331" width="373" height="228.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="405.33333333333331" width="313" height="252.66666666666669"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.down.on.square.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="8SI-sN-h5d">
-                                                <rect key="frame" x="0.0" y="-1.3333333333333428" width="373" height="177"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder-removebg-preview" translatesAutoresizingMaskIntoConstraints="NO" id="8SI-sN-h5d">
+                                                <rect key="frame" x="0.0" y="0.0" width="313" height="203.33333333333334"/>
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mhr-3n-xjU">
-                                                <rect key="frame" x="0.0" y="193.33333333333331" width="373" height="35"/>
+                                                <rect key="frame" x="0.0" y="223.33333333333331" width="313" height="29.333333333333343"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="mhr-3n-xjU" secondAttribute="height" multiplier="373:35" id="e6L-rZ-yDb"/>
                                                 </constraints>
@@ -178,22 +178,37 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="pA9-6M-XQa" firstAttribute="leading" secondItem="i5Q-Re-DtF" secondAttribute="leading" constant="90" id="EgA-bz-eBV"/>
+                                    <constraint firstAttribute="trailing" secondItem="pA9-6M-XQa" secondAttribute="trailing" constant="90" id="stC-kq-HZ3"/>
+                                </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="N9W-gC-pox">
-                                <rect key="frame" x="45" y="744.66666666666663" width="303" height="34.333333333333371"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="N9W-gC-pox">
+                                <rect key="frame" x="40" y="718" width="313" height="49"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nap-qb-exB">
-                                        <rect key="frame" x="0.0" y="0.0" width="121.66666666666667" height="34.333333333333336"/>
-                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="136.66666666666666" height="49"/>
+                                        <color key="tintColor" systemColor="systemTealColor"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Reset" cornerStyle="large">
+                                            <color key="baseBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="resetButtonPressed:" destination="Hoq-LT-acm" eventType="touchUpInside" id="Ev2-uA-Ocm"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E7n-Xo-dGF">
-                                        <rect key="frame" x="181.66666666666666" y="0.0" width="121.33333333333334" height="34.333333333333336"/>
+                                        <rect key="frame" x="176.66666666666663" y="0.0" width="136.33333333333337" height="49"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Create" cornerStyle="large"/>
+                                        <connections>
+                                            <action selector="createBattlePressed:" destination="Hoq-LT-acm" eventType="touchUpInside" id="QFQ-GK-FD3"/>
+                                        </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="N9W-gC-pox" secondAttribute="height" multiplier="313:49" id="U7h-nB-piY"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="L7Z-BW-1cU"/>
@@ -201,14 +216,20 @@
                         <constraints>
                             <constraint firstItem="i5Q-Re-DtF" firstAttribute="top" secondItem="L7Z-BW-1cU" secondAttribute="top" constant="10" id="0s0-0p-m9E"/>
                             <constraint firstItem="N9W-gC-pox" firstAttribute="top" secondItem="i5Q-Re-DtF" secondAttribute="bottom" constant="50" id="7Rk-u6-nNy"/>
-                            <constraint firstItem="i5Q-Re-DtF" firstAttribute="leading" secondItem="L7Z-BW-1cU" secondAttribute="leading" constant="10" id="NX3-3m-bHT"/>
-                            <constraint firstItem="N9W-gC-pox" firstAttribute="leading" secondItem="L7Z-BW-1cU" secondAttribute="leading" constant="45" id="VUk-3Q-UI5"/>
-                            <constraint firstItem="L7Z-BW-1cU" firstAttribute="trailing" secondItem="N9W-gC-pox" secondAttribute="trailing" constant="45" id="WT5-7V-fbg"/>
-                            <constraint firstAttribute="trailing" secondItem="i5Q-Re-DtF" secondAttribute="trailing" constant="10" id="YpH-5r-aKI"/>
-                            <constraint firstItem="L7Z-BW-1cU" firstAttribute="bottom" secondItem="N9W-gC-pox" secondAttribute="bottom" constant="24" id="qlq-uq-P6c"/>
+                            <constraint firstItem="i5Q-Re-DtF" firstAttribute="leading" secondItem="L7Z-BW-1cU" secondAttribute="leading" constant="40" id="NX3-3m-bHT"/>
+                            <constraint firstItem="N9W-gC-pox" firstAttribute="leading" secondItem="L7Z-BW-1cU" secondAttribute="leading" constant="40" id="VUk-3Q-UI5"/>
+                            <constraint firstItem="L7Z-BW-1cU" firstAttribute="trailing" secondItem="N9W-gC-pox" secondAttribute="trailing" constant="40" id="WT5-7V-fbg"/>
+                            <constraint firstAttribute="trailing" secondItem="i5Q-Re-DtF" secondAttribute="trailing" constant="40" id="YpH-5r-aKI"/>
+                            <constraint firstItem="L7Z-BW-1cU" firstAttribute="bottom" secondItem="N9W-gC-pox" secondAttribute="bottom" constant="36" id="qlq-uq-P6c"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Create Battle" image="plus.app" catalog="system" id="lrs-O3-faE"/>
+                    <connections>
+                        <outlet property="firstImageView" destination="2XC-sh-20i" id="qCh-sX-nBu"/>
+                        <outlet property="firstTextfield" destination="pzb-N3-Pso" id="OhR-0Y-bMd"/>
+                        <outlet property="secondImageView" destination="8SI-sN-h5d" id="Fxe-Ru-T71"/>
+                        <outlet property="secondTextfield" destination="mhr-3n-xjU" id="DtU-ck-AtR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uKr-m7-5Hr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -311,6 +332,7 @@
                 <tabBarController storyboardIdentifier="TabBar" automaticallyAdjustsScrollViewInsets="NO" id="mz3-62-5ic" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OQE-x3-i16">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -325,16 +347,18 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Placeholder-removebg-preview" width="500" height="500"/>
         <image name="house.circle" catalog="system" width="128" height="123"/>
         <image name="istockphoto-1459545409-612x612-removebg-preview" width="500" height="500"/>
         <image name="plus.app" catalog="system" width="128" height="114"/>
-        <image name="square.and.arrow.down.on.square.fill" catalog="system" width="122" height="128"/>
-        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
