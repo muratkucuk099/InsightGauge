@@ -9,24 +9,31 @@ import Foundation
 import Firebase
 import FirebaseStorage
 
-struct BattlesMV{
+struct UploadBattlesMV{
     
-    func getUserCollection()-> CollectionReference{
+    func getUserCollectionPosts()-> CollectionReference{
         let db = Firestore.firestore()
-        let user = Auth.auth().currentUser
-        let userCollection = db.collection("Users").document(user!.uid).collection(user!.email!)
+        let userCollection = db.collection("Posts")
         return userCollection
     }
     
     func createBattle(firsImage: String, firstTitle: String, secondeImage: String, secondTitle: String, comments: [String]?, firstVotesUers: [String]?, secondVotesUsers: [String]?) {
-        let battle = Battles(firstImage: firsImage, firstTitle: firstTitle, secondImage: secondeImage, secondTitle: secondTitle, comments: comments, firstVotesUsers: firstVotesUers, secondVotesUsers: secondVotesUsers)
+        let db = Firestore.firestore()
+        let user = Auth.auth().currentUser
+        let battle = Battles(firstImage: firsImage, firstTitle: firstTitle, secondImage: secondeImage, secondTitle: secondTitle, userEmail: (user?.email)!, userUID: user!.uid, comments: [""], firstVotesUsers: [""], secondVotesUsers: [""])
         
         let documentId = UUID().uuidString
-        getUserCollection().document(documentId).setData(["FirstImage": battle.firstImage, "FirstTitle": battle.firstTitle, "SecondImage": battle.secondImage, "SecondTitle": battle.secondTitle, "Comments": [""], "FirstVotes": [""], "SecondVotes": [""]]) { error in
+        getUserCollectionPosts().document(documentId).setData(["FirstImage": battle.firstImage, "FirstTitle": battle.firstTitle, "SecondImage": battle.secondImage, "SecondTitle": battle.secondTitle, "UserEmail": battle.userEmail, "UserUID": battle.userUID, "Comments": [""], "FirstVotes": [""], "SecondVotes": [""]]) { error in
             if let error = error {
                 print("There is an error during create battle! \(error.localizedDescription)")
             } else {
-                print("The Battle created succesfully!") // Yüklenme tamamlandığında bu kısım çalışıyor
+                db.collection("Users").document(user!.uid).collection(user!.email!).document("UserInfo").updateData(["Battles": FieldValue.arrayUnion([documentId])]) { error in
+                    if let error = error {
+                        print("There is an error during upload battle to userInfo \(error.localizedDescription)")
+                    } else {
+                        print("The Battle created succesfully!")
+                    }
+                }
             }
         }
     }
@@ -57,10 +64,5 @@ struct BattlesMV{
                 }
             }
         }
-    }
-    
-    func resetFunction(firstImage: UIImageView, firstTitle: UITextField, secondImage: UIImageView, secondTitle: UITextField) {
-        
-                
     }
 }

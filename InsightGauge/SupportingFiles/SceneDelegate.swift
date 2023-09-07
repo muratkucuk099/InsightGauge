@@ -17,15 +17,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let currentUser = Auth.auth().currentUser
         
-        if currentUser != nil {
-            let board = UIStoryboard(name: "Main", bundle: nil)
-            let tabBar = board.instantiateViewController(withIdentifier: "TabBar") as! UITabBarController
-            window?.rootViewController = tabBar
-        } else {
-            let board = UIStoryboard(name: "Main", bundle: nil)
-            let tabBar = board.instantiateViewController(withIdentifier: "login") as! UINavigationController
-            window?.rootViewController = tabBar
-        }
+//        if currentUser != nil {
+//            let board = UIStoryboard(name: "Main", bundle: nil)
+//            let tabBar = board.instantiateViewController(withIdentifier: "TabBar") as! UITabBarController
+//            window?.rootViewController = tabBar
+//        } else {
+//            let board = UIStoryboard(name: "Main", bundle: nil)
+//            let tabBar = board.instantiateViewController(withIdentifier: "login") as! UINavigationController
+//            window?.rootViewController = tabBar
+//        }
 
         guard let _ = (scene as? UIWindowScene) else { return }
     }

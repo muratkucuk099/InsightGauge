@@ -13,4 +13,5 @@ struct UserAuth {
     let userName : String
     let email : String
     let password : String
+    let battles: [String]
 }

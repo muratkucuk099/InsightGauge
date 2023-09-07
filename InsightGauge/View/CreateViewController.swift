@@ -14,7 +14,7 @@ class CreateViewController: UIViewController, UINavigationControllerDelegate {
     @IBOutlet weak var secondTextfield: UITextField!
     @IBOutlet weak var secondImageView: UIImageView!
     
-    let battlesMV = BattlesMV()
+    let battlesMV = UploadBattlesMV()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,24 +23,25 @@ class CreateViewController: UIViewController, UINavigationControllerDelegate {
     }
     
     @IBAction func createBattlePressed(_ sender: UIButton) {
-        if let firstView = firstImageView.image {
-            if let secondView = secondImageView.image {
-                if let firstTitle = firstTextfield.text {
-                    if let secondTitle = secondTextfield.text {
-                        battlesMV.mediaStorage(image: firstView) { firstResult in
-                            self.battlesMV.mediaStorage(image: secondView) { secondResult in
-                                self.battlesMV.createBattle(firsImage: firstResult, firstTitle: firstTitle, secondeImage: secondResult, secondTitle: secondTitle, comments: [""], firstVotesUers: [""], secondVotesUsers: [""])
-                                
-                                DispatchQueue.main.async {
-                                    self.resetFields()
-                                }
-                            }
+        if let firstView = firstImageView.image,
+           let secondView = secondImageView.image,
+           let firstTitle = firstTextfield.text?.trimmingCharacters(in: .whitespaces),
+           let secondTitle = secondTextfield.text?.trimmingCharacters(in: .whitespaces),
+           !firstTitle.isEmpty, !secondTitle.isEmpty,
+           firstView != UIImage(named: "Placeholder-removebg-preview"),
+           secondView != UIImage(named: "Placeholder-removebg-preview"),
+           firstView != secondView {
+                            battlesMV.mediaStorage(image: firstView) { firstResult in
+                                self.battlesMV.mediaStorage(image: secondView) { secondResult in
+                                    self.battlesMV.createBattle(firsImage: firstResult, firstTitle: firstTitle, secondeImage: secondResult, secondTitle: secondTitle, comments: [""], firstVotesUers: [""], secondVotesUsers: [""])
+                                    
+                                    DispatchQueue.main.async {
+                                        self.resetFields()
                         }
                     }
                 }
             }
         }
-    }
     
     @IBAction func resetButtonPressed(_ sender: UIButton) {
         resetFields()

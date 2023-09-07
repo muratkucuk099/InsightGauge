@@ -12,7 +12,9 @@ struct Battles {
     let firstTitle: String
     let secondImage: String
     let secondTitle: String
-    let comments: [String]?
-    let firstVotesUsers: [String]?
-    let secondVotesUsers: [String]?
+    let userEmail: String
+    let userUID: String
+    let comments: [String]
+    let firstVotesUsers: [String]
+    let secondVotesUsers: [String]
 }

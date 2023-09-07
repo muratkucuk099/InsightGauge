@@ -12,7 +12,7 @@ import FirebaseFirestore
 struct UserAuthMV {
     
     func createUser(name: String, userName: String, email: String, password: String, completion: @escaping (Error?) -> Void) {
-        let user = UserAuth(name: name, userName: userName, email: email, password: password)
+        let user = UserAuth(name: name, userName: userName, email: email, password: password, battles: [""])
         
         Auth.auth().createUser(withEmail: user.email, password: user.password) { authResult, error in
             if let error = error {
