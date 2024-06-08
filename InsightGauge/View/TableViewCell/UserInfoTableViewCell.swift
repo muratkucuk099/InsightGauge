@@ -9,6 +9,11 @@ import UIKit
 
 class UserInfoTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var battlesCountLabel: UILabel!
+    @IBOutlet weak var profileImageView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -9,7 +9,9 @@ import UIKit
 
 class FeedTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var progressBar: UIStackView!
+    @IBOutlet weak var userPhotoImageView: UIImageView!
+    @IBOutlet weak var userNameLabel: UILabel!    
+    @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var secondImageView: UIImageView!
     @IBOutlet weak var secondLabel: UILabel!
     @IBOutlet weak var firstLabel: UILabel!

@@ -9,5 +9,6 @@ import Foundation
 
 struct K {
     public static let cellId = "versusCell"
+    public static let commentCellId = "commentCell"
     public static let loginSegue = "goToMain"
 }

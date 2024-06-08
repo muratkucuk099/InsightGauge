@@ -33,8 +33,7 @@ class CreateViewController: UIViewController, UINavigationControllerDelegate {
            firstView != secondView {
                             battlesMV.mediaStorage(image: firstView) { firstResult in
                                 self.battlesMV.mediaStorage(image: secondView) { secondResult in
-                                    self.battlesMV.createBattle(firsImage: firstResult, firstTitle: firstTitle, secondeImage: secondResult, secondTitle: secondTitle, comments: [""], firstVotesUers: [""], secondVotesUsers: [""])
-                                    
+                                    self.battlesMV.createBattle(firsImage: firstResult, firstTitle: firstTitle, secondeImage: secondResult, secondTitle: secondTitle)                                    
                                     DispatchQueue.main.async {
                                         self.resetFields()
                         }

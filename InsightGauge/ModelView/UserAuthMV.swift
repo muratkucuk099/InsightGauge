@@ -11,6 +11,9 @@ import FirebaseFirestore
 
 struct UserAuthMV {
     
+    let db = Firestore.firestore()
+    let user = Auth.auth().currentUser
+    
     func createUser(name: String, userName: String, email: String, password: String, completion: @escaping (Error?) -> Void) {
         let user = UserAuth(name: name, userName: userName, email: email, password: password, battles: [""])
         
@@ -22,7 +25,6 @@ struct UserAuthMV {
                 return
             }
             
-            let db = Firestore.firestore()
             let userCollection = db.collection("Users").document(authResult?.user.uid ?? "").collection(user.email)
             userCollection.document("UserInfo").setData([
                 "name": user.name,
@@ -48,6 +50,32 @@ struct UserAuthMV {
                 completion(error)
             } else {
                 completion(nil)
+            }
+        }
+    }
+    
+    func getUserInfo(completion: @escaping (UserAuth) -> Void) {
+        let userCollection = db.collection("Users").document(user!.uid).collection(user!.email!).document("UserInfo")
+        print("User Collection \(userCollection)")
+        userCollection.addSnapshotListener { (document, error) in
+            if let error = error {
+                print("Hata: \(error.localizedDescription)")
+            } else {
+                if let document = document, document.exists {
+                    // Belge başarıyla alındı ve mevcut
+                    if let data = document.data() {
+                        if let name = data["name"] as? String,
+                           let userName = data["userName"] as? String,
+                           let email = data["email"] as? String,
+                           let password = data["password"] as? String,
+                           let battles = data["Battles"] as? [String] { // battles olmadığında veri gelmiyor
+                            let user = UserAuth(name: name, userName: userName, email: email, password: password, battles: battles)
+                            completion(user)
+                        }
+                    }
+                } else {
+                    print("Belge bulunamadı veya mevcut değil.")
+                }
             }
         }
     }

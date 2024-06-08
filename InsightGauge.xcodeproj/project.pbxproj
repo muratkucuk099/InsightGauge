@@ -16,6 +16,15 @@
 		04024F912A974D5E009B39F3 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 04024F902A974D5E009B39F3 /* FirebaseFirestore */; };
 		04024F932A974D5E009B39F3 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 04024F922A974D5E009B39F3 /* FirebaseStorage */; };
 		04024F952A974E4C009B39F3 /* UserAuthMV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04024F942A974E4C009B39F3 /* UserAuthMV.swift */; };
+		0421D8952AAB6248007893D3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0421D8942AAB6248007893D3 /* DetailViewController.swift */; };
+		042983A42AD15F8A0017456D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042983A32AD15F8A0017456D /* ProfileViewController.swift */; };
+		042E95262AF18242008C4C34 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 042E95252AF18242008C4C34 /* IQKeyboardManagerSwift */; };
+		0435E92B2AAF317800354025 /* Comments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0435E92A2AAF317800354025 /* Comments.swift */; };
+		0435E92D2AB05C6500354025 /* CommentMV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0435E92C2AB05C6500354025 /* CommentMV.swift */; };
+		0435E9312AB09D7100354025 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0435E92F2AB09D7100354025 /* CommentTableViewCell.swift */; };
+		0435E9322AB09D7100354025 /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0435E9302AB09D7100354025 /* CommentTableViewCell.xib */; };
+		043A24552BC9BCE30015DE3B /* UserInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043A24532BC9BCE30015DE3B /* UserInfoTableViewCell.swift */; };
+		043A24562BC9BCE30015DE3B /* UserInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043A24542BC9BCE30015DE3B /* UserInfoTableViewCell.xib */; };
 		043A30C22A9DD93000C74BD1 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043A30C02A9DD93000C74BD1 /* FeedTableViewCell.swift */; };
 		043A30C32A9DD93000C74BD1 /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043A30C12A9DD93000C74BD1 /* FeedTableViewCell.xib */; };
 		043A30C52A9DDAB900C74BD1 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043A30C42A9DDAB900C74BD1 /* K.swift */; };
@@ -29,6 +38,7 @@
 		045457C62A88D9B100D243A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045457C42A88D9B100D243A4 /* Main.storyboard */; };
 		045457CB2A88D9B200D243A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045457C92A88D9B200D243A4 /* LaunchScreen.storyboard */; };
 		046B13F82AA76EBE00484814 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 046B13F72AA76EBE00484814 /* SDWebImage */; };
+		0475D7FA2AC42799007178C8 /* BattlesDaoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0475D7F92AC42799007178C8 /* BattlesDaoRepository.swift */; };
 		04E735872AA9BACF00F3E161 /* GetBattlesMV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E735862AA9BACF00F3E161 /* GetBattlesMV.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +48,14 @@
 		04024F872A974B7C009B39F3 /* UserAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuth.swift; sourceTree = "<group>"; };
 		04024F892A974CE7009B39F3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		04024F942A974E4C009B39F3 /* UserAuthMV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthMV.swift; sourceTree = "<group>"; };
+		0421D8942AAB6248007893D3 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		042983A32AD15F8A0017456D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = InsightGauge/View/ProfileViewController.swift; sourceTree = SOURCE_ROOT; };
+		0435E92A2AAF317800354025 /* Comments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comments.swift; sourceTree = "<group>"; };
+		0435E92C2AB05C6500354025 /* CommentMV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentMV.swift; sourceTree = "<group>"; };
+		0435E92F2AB09D7100354025 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		0435E9302AB09D7100354025 /* CommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
+		043A24532BC9BCE30015DE3B /* UserInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoTableViewCell.swift; sourceTree = "<group>"; };
+		043A24542BC9BCE30015DE3B /* UserInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserInfoTableViewCell.xib; sourceTree = "<group>"; };
 		043A30C02A9DD93000C74BD1 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		043A30C12A9DD93000C74BD1 /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
 		043A30C42A9DDAB900C74BD1 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
@@ -52,6 +70,7 @@
 		045457C52A88D9B100D243A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		045457CA2A88D9B200D243A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		045457CC2A88D9B200D243A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0475D7F92AC42799007178C8 /* BattlesDaoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattlesDaoRepository.swift; sourceTree = "<group>"; };
 		04E735862AA9BACF00F3E161 /* GetBattlesMV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBattlesMV.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,6 +84,7 @@
 				04024F8D2A974D5E009B39F3 /* FirebaseAuth in Frameworks */,
 				04024F912A974D5E009B39F3 /* FirebaseFirestore in Frameworks */,
 				046B13F82AA76EBE00484814 /* SDWebImage in Frameworks */,
+				042E95262AF18242008C4C34 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,8 +107,8 @@
 		04024F782A9677C7009B39F3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				04024F872A974B7C009B39F3 /* UserAuth.swift */,
-				043A30CB2AA0CD0600C74BD1 /* Battles.swift */,
+				0475D7F82AC4274F007178C8 /* Repository */,
+				0475D7F72AC42743007178C8 /* Entity */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -96,12 +116,15 @@
 		04024F792A9677CC009B39F3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				043A30C62A9DDB2E00C74BD1 /* TableViewCell */,
+				0435E92E2AB09D5700354025 /* CommentTableViewCell */,
 				045457C22A88D9B100D243A4 /* LoginViewController.swift */,
 				04024F832A9745A7009B39F3 /* SignUpViewController.swift */,
 				04024F852A9746A2009B39F3 /* MainViewController.swift */,
 				043A30C92A9E3EA100C74BD1 /* CreateViewController.swift */,
+				0421D8942AAB6248007893D3 /* DetailViewController.swift */,
+				042983A32AD15F8A0017456D /* ProfileViewController.swift */,
 				045457C42A88D9B100D243A4 /* Main.storyboard */,
-				043A30C62A9DDB2E00C74BD1 /* TableViewCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -112,8 +135,18 @@
 				04024F942A974E4C009B39F3 /* UserAuthMV.swift */,
 				043A30CD2AA0CDF900C74BD1 /* UploadBattlesMV.swift */,
 				04E735862AA9BACF00F3E161 /* GetBattlesMV.swift */,
+				0435E92C2AB05C6500354025 /* CommentMV.swift */,
 			);
 			path = ModelView;
+			sourceTree = "<group>";
+		};
+		0435E92E2AB09D5700354025 /* CommentTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				0435E92F2AB09D7100354025 /* CommentTableViewCell.swift */,
+				0435E9302AB09D7100354025 /* CommentTableViewCell.xib */,
+			);
+			path = CommentTableViewCell;
 			sourceTree = "<group>";
 		};
 		043A30C62A9DDB2E00C74BD1 /* TableViewCell */ = {
@@ -121,6 +154,8 @@
 			children = (
 				043A30C02A9DD93000C74BD1 /* FeedTableViewCell.swift */,
 				043A30C12A9DD93000C74BD1 /* FeedTableViewCell.xib */,
+				043A24532BC9BCE30015DE3B /* UserInfoTableViewCell.swift */,
+				043A24542BC9BCE30015DE3B /* UserInfoTableViewCell.xib */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -153,6 +188,24 @@
 			path = InsightGauge;
 			sourceTree = "<group>";
 		};
+		0475D7F72AC42743007178C8 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				04024F872A974B7C009B39F3 /* UserAuth.swift */,
+				043A30CB2AA0CD0600C74BD1 /* Battles.swift */,
+				0435E92A2AAF317800354025 /* Comments.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		0475D7F82AC4274F007178C8 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				0475D7F92AC42799007178C8 /* BattlesDaoRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -175,6 +228,7 @@
 				04024F902A974D5E009B39F3 /* FirebaseFirestore */,
 				04024F922A974D5E009B39F3 /* FirebaseStorage */,
 				046B13F72AA76EBE00484814 /* SDWebImage */,
+				042E95252AF18242008C4C34 /* IQKeyboardManagerSwift */,
 			);
 			productName = InsightGauge;
 			productReference = 045457BB2A88D9B100D243A4 /* InsightGauge.app */;
@@ -207,6 +261,7 @@
 			packageReferences = (
 				04024F8B2A974D5E009B39F3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				046B13F62AA76EBE00484814 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				042E95242AF18241008C4C34 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = 045457BC2A88D9B100D243A4 /* Products */;
 			projectDirPath = "";
@@ -223,6 +278,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				045457CB2A88D9B200D243A4 /* LaunchScreen.storyboard in Resources */,
+				0435E9322AB09D7100354025 /* CommentTableViewCell.xib in Resources */,
+				043A24562BC9BCE30015DE3B /* UserInfoTableViewCell.xib in Resources */,
 				043A30C32A9DD93000C74BD1 /* FeedTableViewCell.xib in Resources */,
 				04024F8A2A974CE7009B39F3 /* GoogleService-Info.plist in Resources */,
 				045457C62A88D9B100D243A4 /* Main.storyboard in Resources */,
@@ -237,19 +294,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				043A24552BC9BCE30015DE3B /* UserInfoTableViewCell.swift in Sources */,
+				0435E92D2AB05C6500354025 /* CommentMV.swift in Sources */,
 				043A30CA2A9E3EA100C74BD1 /* CreateViewController.swift in Sources */,
 				043A30C52A9DDAB900C74BD1 /* K.swift in Sources */,
 				04024F952A974E4C009B39F3 /* UserAuthMV.swift in Sources */,
 				043A30C22A9DD93000C74BD1 /* FeedTableViewCell.swift in Sources */,
 				043A30CE2AA0CDF900C74BD1 /* UploadBattlesMV.swift in Sources */,
+				0435E9312AB09D7100354025 /* CommentTableViewCell.swift in Sources */,
 				045457C32A88D9B100D243A4 /* LoginViewController.swift in Sources */,
 				043A30CC2AA0CD0600C74BD1 /* Battles.swift in Sources */,
+				042983A42AD15F8A0017456D /* ProfileViewController.swift in Sources */,
 				045457BF2A88D9B100D243A4 /* AppDelegate.swift in Sources */,
 				04024F882A974B7C009B39F3 /* UserAuth.swift in Sources */,
 				04024F842A9745A7009B39F3 /* SignUpViewController.swift in Sources */,
 				045457C12A88D9B100D243A4 /* SceneDelegate.swift in Sources */,
+				0435E92B2AAF317800354025 /* Comments.swift in Sources */,
+				0475D7FA2AC42799007178C8 /* BattlesDaoRepository.swift in Sources */,
 				04024F862A9746A2009B39F3 /* MainViewController.swift in Sources */,
 				04E735872AA9BACF00F3E161 /* GetBattlesMV.swift in Sources */,
+				0421D8952AAB6248007893D3 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +545,14 @@
 				minimumVersion = 10.0.0;
 			};
 		};
+		042E95242AF18241008C4C34 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.16;
+			};
+		};
 		046B13F62AA76EBE00484814 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:SDWebImage/SDWebImage.git";
@@ -511,6 +583,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 04024F8B2A974D5E009B39F3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		042E95252AF18242008C4C34 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 042E95242AF18241008C4C34 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
 		};
 		046B13F72AA76EBE00484814 /* SDWebImage */ = {
 			isa = XCSwiftPackageProductDependency;
